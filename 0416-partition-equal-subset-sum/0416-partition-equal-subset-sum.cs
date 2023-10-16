@@ -1,38 +1,38 @@
 public class Solution {
     public bool CanPartition(int[] nums) {
         int sum = 0;
-        int target = 0;
-
-        foreach(var num in nums){
-            sum+= num;
+    
+        foreach (int num in nums)
+        {
+            sum += num;
         }
-        if(sum%2 != 0){
+    
+        if (sum % 2 != 0)
+        {
             return false;
         }
+        
+        int targetSum = sum / 2;
+        int n = nums.Length;
 
-        target = sum/2;
+        bool[,] dp = new bool[n+1,targetSum+1];
 
-        Dictionary<(int,int),bool> memo = new Dictionary<(int,int),bool>();
-        return Solve(nums,target,0,memo);
-    }
-
-    public bool Solve(int[] nums,int target, int i,Dictionary<(int,int),bool> memo){
-        if(i >= nums.Length){
-            return false;
-        }
-        if(target < 0){
-            return false;
-        }
-        if(target == 0){
-            return true;
+        for (int i = 0; i <= n; i++)
+        {
+            dp[i, 0] = true;
         }
 
-        if(memo.ContainsKey((i,target))){
-            return memo[(i,target)];
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=targetSum;j++){
+                if(nums[i-1] > j){
+                    dp[i,j] = dp[i-1,j];
+                }
+                else{
+                    dp[i,j] = dp[i-1,j] || dp[i-1,j - nums[i-1]];
+                }
+            }
         }
 
-        memo[(i,target)] = Solve(nums,target-nums[i],i+1,memo) || Solve(nums,target,i+1,memo);
-
-        return memo[(i,target)];
+        return dp[n,targetSum];
     }
 }
