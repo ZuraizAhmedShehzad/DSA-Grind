@@ -1,44 +1,47 @@
 public class Solution {
     public int LengthOfLIS(int[] nums) {
-        if (nums == null || nums.Length == 0)
-            return 0;
+        // if(nums.Length == 0)
+        //     return 0;
+        
+         List<int> seq = new List<int>();
+         seq.Add(nums[0]);
 
-        int n = nums.Length;
-        int[] memo = new int[n];
-        for (int i = 0; i < n; i++)
-        {
-            memo[i] = -1; // Initialize memoization array with -1
-        }
-
-        int maxLIS = 1;
-        for (int i = 0; i < n; i++)
-        {
-            maxLIS = Math.Max(maxLIS, LIS_memo(nums, i, memo));
-        }
-
-        return maxLIS;
-    }
-
-    public static int LIS_memo(int[] nums, int currentIdx, int[] memo)
-    {
-        if (memo[currentIdx] != -1)
-        {
-            return memo[currentIdx];
-        }
-
-        int maxLIS = 1;
-        for (int i = 0; i < currentIdx; i++)
-        {
-            if (nums[currentIdx] > nums[i])
-            {
-                maxLIS = Math.Max(maxLIS, 1 + LIS_memo(nums, i, memo));
+        for(int i=0;i<nums.Length;i++){
+            int lastElement = seq[seq.Count-1];
+            if(lastElement >= nums[i]){
+                int v = BS(seq,nums[i]);
+                Console.WriteLine(v);
+                seq[v] = nums[i];
+            }
+            else{
+                seq.Add(nums[i]);
             }
         }
 
-        memo[currentIdx] = maxLIS;
-        return maxLIS;
+        return seq.Count;
+    }
+
+    public int BS(List<int> Seq, int Value){
+        int r = Seq.Count - 1;
+        int l = 0;
+
+        while(r > l){
+            int mid = l + (r - l)/2;
+            if(Seq[mid] < Value){
+                l = mid + 1;
+            }
+            else{
+                r = mid;
+            }
+        }
+
+        return l;
     }
 }
 
-// 2 -> 2 -> 1
-//1 4 2 3 -> 1 2 3 -> 3
+//0
+//0 1
+//0 1
+//0 1 3
+//0 1 2
+//0 1 2 3
