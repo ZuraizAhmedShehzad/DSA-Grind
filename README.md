@@ -11,14 +11,6 @@ Welcome to my personal repository for C# Data Structures and Algorithms intervie
 
 This repository is a reflection of my personal coding journey as I prepare for technical interviews. It houses my solutions to a variety of data structures and algorithms problems, implemented in C#. While I'm not actively seeking contributions, I'm more than happy to share this resource with you as you embark on your own path to success.
 
-## Table of Contents
-
-1. [Folder Structure](#folder-structure)
-2. [How to Use](#how-to-use)
-3. [License](#license)
-
-## Folder Structure
-
 - `Sorting`: Contains C# implementations of sorting algorithms like Bubble Sort, Quick Sort, and Merge Sort.
 - `Searching`: Includes C# solutions for searching algorithms such as Binary Search.
 - `DataStructures`: Contains C# implementations of common data structures like LinkedList, Binary Tree, and Stack.
@@ -31,5 +23,5 @@ This repository is a reflection of my personal coding journey as I prepare for t
 1. Clone this repository to your local machine using `git clone`:
 
    ```shell
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/ZuraizAhmedShehzad/DSA-Grind.git
 
