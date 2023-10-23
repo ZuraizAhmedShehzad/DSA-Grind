@@ -1,9 +1,9 @@
 # C# Data Structures and Algorithms Interview Preparation
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/ZuraizAhmedShehzad/DSA-Grind)
-![GitHub language count](https://img.shields.io/github/languages/count/your-username/your-repo-name)
-![GitHub top language](https://img.shields.io/github/languages/top/your-username/your-repo-name)
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/your-repo-name)
+![GitHub language count](https://img.shields.io/github/languages/count/ZuraizAhmedShehzad/DSA-Grind)
+![GitHub top language](https://img.shields.io/github/languages/top/ZuraizAhmedShehzad/DSA-Grind)
+![GitHub repo size](https://img.shields.io/github/repo-size/ZuraizAhmedShehzad/DSA-Grind)
 
 Welcome to my personal repository for C# Data Structures and Algorithms interview preparation! This repository contains a collection of C# solutions to common coding problems and data structures, curated for my own journey, but shared with the community to inspire and assist others.
 
