@@ -1,6 +1,6 @@
 # C# Data Structures and Algorithms Interview Preparation
 
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/your-repo-name)
+![GitHub last commit](https://img.shields.io/github/last-commit/ZuraizAhmedShehzad/DSA-Grind)
 ![GitHub language count](https://img.shields.io/github/languages/count/your-username/your-repo-name)
 ![GitHub top language](https://img.shields.io/github/languages/top/your-username/your-repo-name)
 ![GitHub repo size](https://img.shields.io/github/repo-size/your-username/your-repo-name)
